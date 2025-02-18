@@ -26,10 +26,12 @@ const heros = ["shaktiman", "naagraj", "doga"];
 let myObj = {
     name: "hitesh",
     age: 22,
-}
+} // data type is function object
 
 const myFunction = function(){
     console.log("Hello world");
 }
 
 console.log(typeof anotherId);
+// if we try to find the data type of null using typeof then object will be output
+// if we try to find the data type of undefined using typeof then undefined will be output
