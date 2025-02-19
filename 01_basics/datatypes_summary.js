@@ -35,3 +35,23 @@ const myFunction = function(){
 console.log(typeof anotherId);
 // if we try to find the data type of null using typeof then object will be output
 // if we try to find the data type of undefined using typeof then undefined will be output
+
+
+//Stack (Primitive), Heap (Non- Primitive)
+let myYoutubename = "hiteshchoudharydotccom"
+let anothername = myYoutubename
+anothername = "chaiaurcode"
+
+console.log(myYoutubename); //hiteshchoudharydotcom
+console.log(anothername);  //chaiaurcode
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+let userTwo = userOne
+
+userTwo.email = "Pratimakum@gmail.com"
+
+console.log(userOne.email); // output Pratimakum@gmail.com
+console.log(userTwo.email); // output Pratimakum@gmail.com
