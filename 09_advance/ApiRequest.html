@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(187, 218, 95, 0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(156, 223, 62, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+    </style>
+</head>
+    <body style="background-color: #e3ebf0;">
+        <div class="card">
+            <img src="https://avatars.githubusercontent.com/u/11613311?v=4" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>Hitesh Choudhary</b></h4>
+              <p>Architect & Engineer</p>
+              <div id="followers">Followers: Loading...</div>
+            </div>
+          </div>
+   
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('Get' , requestUrl)
+    xhr.onreadystatechange = function(){
+        const data = JSON.parse(xhr.responseText);
+        document.getElementById('followers').textContent = 
+        `Followers: ${data.followers}`;
+    }
+    xhr.send();
+</script>
+</html>
